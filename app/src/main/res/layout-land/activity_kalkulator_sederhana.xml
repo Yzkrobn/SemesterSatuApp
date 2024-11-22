@@ -88,9 +88,9 @@
         app:layout_constraintTop_toBottomOf="@id/TvOprasiAritmatika" />
 
     <Button
+        android:id="@+id/BtHitung"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:id="@+id/BtHitung"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/SOprasiAritmatika"

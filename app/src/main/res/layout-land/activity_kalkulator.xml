@@ -16,16 +16,17 @@
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
 
     <TextView
         android:id="@+id/tvDisplay"
         android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:layout_margin="16dp"
         android:background="#E0E0E0"
         android:gravity="end|center_vertical"
-        android:padding="16dp"
+        android:padding="0dp"
         android:text="0"
         android:textColor="#000000"
         android:textSize="80sp"
@@ -35,34 +36,36 @@
 
     <GridLayout
         android:id="@+id/constraintButtons1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
         android:layout_margin="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/tvDisplay"
-        app:layout_constraintStart_toStartOf="@+id/tvDisplay"
-        app:layout_constraintTop_toBottomOf="@+id/tvDisplay">
+        android:columnCount="1"
+        android:rowCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gridButtons2">
+
         <TextView
             android:id="@+id/TVTVClearAll"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:text="CA"
+            android:layout_columnWeight="2"
+            android:background="@drawable/outline1"
+            android:text="C\nA"
             android:textAlignment="center"
-            android:textSize="60sp"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/outline1"/>
+            android:textSize="40sp" />
+
         <TextView
             android:id="@+id/TVPlusMinus"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
+            android:layout_columnWeight="2"
+            android:background="@drawable/outline1"
+            android:text="\n-/+"
             android:textAlignment="center"
-            android:text="-/+"
-            android:textSize="60sp"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/outline1"/>
+            android:textSize="40sp" />
     </GridLayout>
 
     <GridLayout
@@ -74,8 +77,8 @@
         android:rowCount="4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintButtons1">
+        app:layout_constraintStart_toEndOf="@+id/constraintButtons1"
+        app:layout_constraintTop_toBottomOf="@+id/tvDisplay">
 
         <Button
             android:id="@+id/B7"
