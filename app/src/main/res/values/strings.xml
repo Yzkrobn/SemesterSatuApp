@@ -18,5 +18,6 @@
         <item>Celcius</item>
         <item>Fahrenheit</item>
         <item>Kelvin</item>
+        <item>Reamur</item>
     </string-array>
 </resources>

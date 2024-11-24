@@ -32,7 +32,7 @@
         android:textSize="80sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TVJudul" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <GridLayout
         android:id="@+id/constraintButtons1"
