@@ -76,7 +76,7 @@
             />
 
         <com.google.android.material.chip.ChipGroup
-            android:id="@+id/chipGroupGender"
+            android:id="@+id/CGJenisKelamin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -115,6 +115,7 @@
             android:entries="@array/ArrayEkstrakulikuler"
             />
         <Button
+            android:id="@+id/BKirim"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
