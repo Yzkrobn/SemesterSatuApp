@@ -1,10 +1,12 @@
 package com.example.tugassemestersatuapp
 
+import android.content.Intent
 import android.icu.text.DecimalFormat
 import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
@@ -16,6 +18,7 @@ import androidx.core.view.WindowInsetsCompat
 
 
 class KonversiSuhuActivity : AppCompatActivity() {
+    lateinit var IVBack : ImageView
     lateinit var suhuAwal : Spinner
     lateinit var  suhuAkhir : Spinner
     lateinit var  input : EditText
@@ -39,6 +42,10 @@ class KonversiSuhuActivity : AppCompatActivity() {
         konversi.setOnClickListener{
             konversi()
         }
+        IVBack.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -46,6 +53,7 @@ class KonversiSuhuActivity : AppCompatActivity() {
         }
     }
     fun init(){
+        IVBack = findViewById(R.id.IVBack)
         suhuAwal = findViewById(R.id.spSuhuAwal)
         suhuAkhir = findViewById(R.id.spSuhuAkhir)
         input = findViewById(R.id.etSuhuAwal)

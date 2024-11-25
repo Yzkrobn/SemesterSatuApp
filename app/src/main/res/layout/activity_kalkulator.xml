@@ -7,31 +7,47 @@
     android:layout_height="match_parent"
     tools:context=".KalkulatorActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/baseline_arrow_back_ios_new_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/TVJudul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:gravity="center_horizontal"
-        android:text="Kalkulator"
-        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/IVBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/baseline_arrow_back_ios_new_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginBottom="15dp"
+            android:text="Kalkulator"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/IVBack"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/TVDisplay"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_margin="16dp"
+        android:layout_marginTop="20dp"
         android:background="#E0E0E0"
         android:gravity="end|center_vertical"
         android:padding="16dp"
@@ -40,38 +56,43 @@
         android:textSize="80sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TVJudul" />
+        app:layout_constraintTop_toBottomOf="@+id/constraint" />
 
     <GridLayout
         android:id="@+id/constraintButtons1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/TVDisplay"
-        app:layout_constraintStart_toStartOf="@+id/TVDisplay"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TVDisplay">
+
         <TextView
             android:id="@+id/TVClearAll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_row="0"
             android:layout_rowWeight="1"
+            android:layout_column="0"
             android:layout_columnWeight="1"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/outline1"
             android:text="CA"
             android:textAlignment="center"
-            android:textSize="60sp"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/outline1"/>
+            android:textSize="60sp" />
+
         <TextView
             android:id="@+id/TVPlusMinus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:textAlignment="center"
-            android:text="-/+"
-            android:textSize="60sp"
             android:layout_marginStart="20dp"
-            android:background="@drawable/outline1"/>
+            android:background="@drawable/outline1"
+            android:text="-/+"
+            android:textAlignment="center"
+            android:textSize="60sp" />
     </GridLayout>
 
     <GridLayout

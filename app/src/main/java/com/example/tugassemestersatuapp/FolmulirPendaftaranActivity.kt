@@ -1,8 +1,10 @@
 package com.example.tugassemestersatuapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Spinner
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +14,7 @@ import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 
 class FolmulirPendaftaranActivity : AppCompatActivity() {
+    lateinit var IVBack : ImageView
     lateinit var etNama : EditText
     lateinit var etAlamat : EditText
     lateinit var etNoHp : EditText
@@ -28,6 +31,10 @@ class FolmulirPendaftaranActivity : AppCompatActivity() {
         BKirim.setOnClickListener{
             kirim()
         }
+        IVBack.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -35,6 +42,7 @@ class FolmulirPendaftaranActivity : AppCompatActivity() {
         }
     }
     fun init(){
+        IVBack = findViewById(R.id.IVBack)
         etNama = findViewById(R.id.etNama)
         etAlamat = findViewById(R.id.etAlamat)
         etNoHp = findViewById(R.id.etNoHp)

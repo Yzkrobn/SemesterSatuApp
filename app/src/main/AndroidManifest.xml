@@ -16,7 +16,7 @@
             android:name=".UjiActivity"
             android:exported="false" />
         <activity
-            android:name=".FolmulirPendaftaranActivity"
+            android:name=".KalkulatorSederhanaActivity"
             android:exported="false" />
         <activity
             android:name=".KalkulatorActivity"
@@ -28,7 +28,7 @@
             android:name=".CardViewProvileActivity"
             android:exported="false" />
         <activity
-            android:name=".KalkulatorSederhanaActivity"
+            android:name=".FolmulirPendaftaranActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

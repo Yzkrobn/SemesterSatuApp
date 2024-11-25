@@ -1,8 +1,10 @@
 package com.example.tugassemestersatuapp
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.icu.util.Calendar
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +14,7 @@ import java.text.SimpleDateFormat
 import java.util.Locale
 
 class CardViewProvileActivity : AppCompatActivity() {
+    lateinit var IVBack : ImageView
     private lateinit var TVSelamat: TextView
     private lateinit var TVWaktu: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +23,10 @@ class CardViewProvileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_card_view_provile)
         init()
         pewaktu()
+        IVBack.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -27,6 +34,7 @@ class CardViewProvileActivity : AppCompatActivity() {
         }
     }
     private fun init(){
+        IVBack = findViewById(R.id.IVBack)
         TVSelamat = findViewById(R.id.TVSelamat)
         TVWaktu = findViewById(R.id.TVWaktu)
     }

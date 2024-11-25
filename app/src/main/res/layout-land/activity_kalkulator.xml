@@ -7,26 +7,39 @@
     android:layout_height="match_parent"
     tools:context=".KalkulatorActivity">
 
-    <TextView
-        android:id="@+id/TVJudul"
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="Kalkulator"
-        android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/constraintButtons1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/baseline_arrow_back_ios_new_24"
-        app:layout_constraintBottom_toBottomOf="@+id/tvDisplay"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/IVBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/baseline_arrow_back_ios_new_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:text="Kalkulator"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/IVBack" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/tvDisplay"
@@ -40,7 +53,7 @@
         android:textColor="#000000"
         android:textSize="80sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/constraint"
         app:layout_constraintTop_toTopOf="parent" />
 
     <GridLayout
@@ -51,7 +64,7 @@
         android:columnCount="1"
         android:rowCount="2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraint"
         app:layout_constraintTop_toTopOf="@+id/gridButtons2">
 
         <TextView
@@ -96,7 +109,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="7"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/B9"
@@ -105,7 +118,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="8"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/btn9"
@@ -114,7 +127,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="9"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/BBAgi"
@@ -124,7 +137,7 @@
             android:layout_columnWeight="1"
             android:backgroundTint="#FF5722"
             android:text="÷"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/B4"
@@ -133,7 +146,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="4"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/b5"
@@ -142,7 +155,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="5"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/B6"
@@ -151,7 +164,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="6"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/BKali"
@@ -161,7 +174,7 @@
             android:layout_columnWeight="1"
             android:backgroundTint="#FF5722"
             android:text="X"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/B1"
@@ -170,7 +183,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="1"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/B2"
@@ -179,7 +192,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="2"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/B3"
@@ -188,7 +201,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="3"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/BKurang"
@@ -198,7 +211,7 @@
             android:layout_columnWeight="1"
             android:backgroundTint="#FF5722"
             android:text="-"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/BHitung"
@@ -208,7 +221,7 @@
             android:layout_columnWeight="1"
             android:backgroundTint="#FF5722"
             android:text="="
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
 
         <Button
@@ -218,7 +231,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="0"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/BKoma"
@@ -227,7 +240,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text=","
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/BTambah"
@@ -237,7 +250,7 @@
             android:layout_columnWeight="1"
             android:backgroundTint="#FF5722"
             android:text="+"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
 
     </GridLayout>

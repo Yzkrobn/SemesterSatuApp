@@ -7,37 +7,52 @@
     android:layout_height="match_parent"
     tools:context=".KonversiSuhuActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:background="@drawable/baseline_arrow_back_ios_new_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvJudul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="34dp"
-        android:text="Konversi Suhu"
-        android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/IVBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/baseline_arrow_back_ios_new_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginBottom="15dp"
+            android:text="Kartu Profil"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/IVBack"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/tvSuhuAwal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
         android:text="Masukkan Suhu Awal"
         android:textAlignment="textStart"
+        android:layout_marginTop="20dp"
         android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvJudul" />
+        app:layout_constraintTop_toBottomOf="@+id/constraint" />
 
     <EditText
         android:id="@+id/etSuhuAwal"
@@ -71,12 +86,13 @@
         android:id="@+id/tvKonversikanKe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-        android:layout_marginTop="30dp"
         android:text="Konversikan Ke"
+        android:layout_marginTop="20dp"
+
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
         app:layout_constraintEnd_toStartOf="@+id/tvHasilSuhuAkhir"
         app:layout_constraintStart_toEndOf="@+id/etSuhuAwal"
-        app:layout_constraintTop_toBottomOf="@+id/tvJudul" />
+        app:layout_constraintTop_toBottomOf="@+id/constraint" />
 
     <Spinner
         android:id="@+id/spSuhuAkhir"
@@ -104,14 +120,14 @@
         android:id="@+id/tvSuhuAkhir"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:text="Suhu Akhir"
+        android:layout_marginTop="20dp"
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tvHasilSuhuAkhir"
-        app:layout_constraintTop_toBottomOf="@+id/tvJudul" />
+        app:layout_constraintTop_toBottomOf="@+id/constraint" />
 
     <TextView
         android:id="@+id/tvHasilSuhuAkhir"
