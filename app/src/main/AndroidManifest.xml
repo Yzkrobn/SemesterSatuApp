@@ -13,13 +13,10 @@
         android:theme="@style/Theme.TugasSemesterSatuApp"
         tools:targetApi="31">
         <activity
-            android:name=".UjiActivity"
-            android:exported="false" />
-        <activity
             android:name=".KalkulatorSederhanaActivity"
             android:exported="false" />
         <activity
-            android:name=".KalkulatorActivity"
+            android:name=".FolmulirPendaftaranActivity"
             android:exported="false" />
         <activity
             android:name=".KonversiSuhuActivity"
@@ -28,7 +25,7 @@
             android:name=".CardViewProvileActivity"
             android:exported="false" />
         <activity
-            android:name=".FolmulirPendaftaranActivity"
+            android:name=".KalkulatorActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

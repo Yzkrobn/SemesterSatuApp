@@ -1,6 +1,8 @@
 package com.example.tugassemestersatuapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.icu.text.DecimalFormat
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
@@ -40,6 +42,7 @@ class KalkulatorActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_kalkulator)
         init()
+        tombol()
         IVBack.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -72,6 +75,7 @@ class KalkulatorActivity : AppCompatActivity() {
         BNol = findViewById(R.id.BNol)
         BKoma = findViewById(R.id.BKoma)
     }
+    @SuppressLint("SetTextI18n")
     fun tombol(){
         TVClearAll.setOnClickListener{
             koma = false
@@ -156,7 +160,68 @@ class KalkulatorActivity : AppCompatActivity() {
             }
         }
         BKoma.setOnClickListener{
-            if ()
+            if(TVDisplay.text.isNotEmpty()){
+                TVDisplay.setText("${TVDisplay.text}.")
+            }else{
+                koma = true
+            }
+        }
+        BBAgi.setOnClickListener{
+            isiData()
+            aksi = "bagi"
+        }
+        BKali.setOnClickListener{
+            isiData()
+            aksi = "kali"
+        }
+        BKurang.setOnClickListener{
+            isiData()
+            aksi = "kurang"
+            TVDisplay.setText("-")
+        }
+        BTambah.setOnClickListener{
+            isiData()
+            aksi = "tambah"
+        }
+        BHitung.setOnClickListener{
+            if (aksi.isNotEmpty()){
+                val decimalFormat = DecimalFormat("#.###")
+                val NilaiDisplay = if (TVDisplay.text.isNotEmpty()){TVDisplay.text.toString().toDouble()} else {0.0}
+                if (aksi.equals("tambah")){
+                    val hasilHitung = NilaiAwal + NilaiDisplay
+                    val terformat = decimalFormat.format(hasilHitung)
+                    TVDisplay.setText(terformat)
+                }else if (aksi.equals("kurang")){
+                    val hasilHitung = NilaiAwal - NilaiDisplay
+                    val terformat  = decimalFormat.format(hasilHitung)
+                    TVDisplay.setText(terformat)
+                }else if (aksi.equals("kali")) {
+                    val hasilHitung = NilaiAwal * NilaiDisplay
+                    val terformat = decimalFormat.format(hasilHitung)
+                    TVDisplay.setText(terformat)
+                }else if (aksi.equals("bagi")){
+                    if (TVDisplay.text.toString().toDouble()==0.0){
+                        TVDisplay.setText("Tidak bisa membagi dengan 0/Nol")
+                    }else{
+                        val hasilHitung = NilaiAwal / NilaiDisplay
+                        val terformat  = decimalFormat.format(hasilHitung)
+                        TVDisplay.setText(terformat)
+                    }
+                }
+            }
+        }
+    }
+    @SuppressLint("SetTextI18n")
+    fun isiData(){
+        if (TVDisplay.text.isNotEmpty()){
+            try {
+                NilaiAwal = TVDisplay.text.toString().toDouble()
+                TVDisplay.setText("")
+            }catch (e: NumberFormatException){
+                NilaiAwal = 0.0
+            }
+        }else{
+            NilaiAwal = 0.0
         }
     }
 }

@@ -9,7 +9,8 @@
 
    <androidx.constraintlayout.widget.ConstraintLayout
        android:layout_width="match_parent"
-       android:layout_height="wrap_content">
+       android:layout_height="wrap_content"
+       android:paddingBottom="30dp">
 
       <androidx.constraintlayout.widget.ConstraintLayout
           android:id="@+id/constraintLayout"
@@ -46,7 +47,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/TVUser"
+                android:id="@+id/TVWaktu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
@@ -200,7 +201,7 @@
          <androidx.constraintlayout.widget.ConstraintLayout
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:background="@drawable/backgroundProfile">
+             android:background="@color/black">
 
             <ImageView
                 android:id="@+id/imageView1"
@@ -256,7 +257,7 @@
          <androidx.constraintlayout.widget.ConstraintLayout
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:background="@drawable/backgroundForm">
+             android:background="@color/black">
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -313,7 +314,7 @@
          <androidx.constraintlayout.widget.ConstraintLayout
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:background="@drawable/backgroundKonversi">
+             android:background="@color/black">
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -370,7 +371,7 @@
          <androidx.constraintlayout.widget.ConstraintLayout
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:background="@drawable/backgroundKal">
+             android:background="@color/black">
 
             <ImageView
                 android:id="@+id/imageView4"
