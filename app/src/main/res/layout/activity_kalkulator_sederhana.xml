@@ -5,8 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".KalkulatorSederhanaActivity"
-    android:background="@drawable/background">
+    tools:context=".KalkulatorSederhanaActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint"
@@ -131,6 +130,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/SOprasiAritmatika"
         android:text="Hitung"
+        android:backgroundTint="#1287C8"
+        android:textColor="#F2FAFC"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="30dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

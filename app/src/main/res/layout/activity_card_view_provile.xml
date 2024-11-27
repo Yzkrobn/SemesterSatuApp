@@ -34,7 +34,7 @@
             android:layout_marginEnd="44dp"
             android:layout_marginBottom="15dp"
             android:text="Kartu Profil"
-            android:textColor="@color/black"
+            android:textColor="#0F80BE"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -52,6 +52,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:cardBackgroundColor="#1287C8"
                 android:layout_gravity="center"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="20dp"
@@ -92,7 +93,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Oktavian Bagas Nugroho"
-                                android:textColor="@color/black"
+                                android:textColor="#F2FAFC"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
@@ -100,7 +101,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="085942101462"
-                                android:textColor="@color/black"
+                                android:textColor="#F2FAFC"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
@@ -108,7 +109,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="oktavianbagasnugroho@gmail.com"
-                                android:textColor="@color/black"
+                                android:textColor="#F2FAFC"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
@@ -130,7 +131,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Selamat Siang"
-                    android:textColor="@color/black"
+                    android:textColor="#0F80BE"
                     android:textStyle="bold" />
 
                 <TextView
@@ -138,7 +139,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Rabu,25 September 2024"
-                    android:textColor="@color/black"
+                    android:textColor="#0F80BE"
                     android:textStyle="bold" />
             </LinearLayout>
             <androidx.cardview.widget.CardView
@@ -160,11 +161,11 @@
                         android:id="@+id/tvprofil1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#32a852"
+                        android:background="#0F80BE"
                         android:paddingHorizontal="20dp"
                         android:paddingVertical="10dp"
                         android:text="Provil Saya"
-                        android:textColor="@color/black"
+                        android:textColor="#F2FAFC"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -185,43 +186,43 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="NIS"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="NISN"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Kelas"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Jurusan"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Status"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Tahun Masuk"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Tahun Lulus"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -239,49 +240,49 @@
                             android:layout_height="wrap_content"
                             android:text="18148"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="1987634824"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="XI(10)"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="RPL"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Aktif"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="2023"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="2026"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
@@ -302,11 +303,11 @@
                         android:id="@+id/tvprofil2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#32a852"
+                        android:background="#0F80BE"
                         android:paddingHorizontal="20dp"
                         android:paddingVertical="10dp"
                         android:text="Provil Saya"
-                        android:textColor="@color/black"
+                        android:textColor="#F2FAFC"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -327,43 +328,43 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Alamat"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Jenis Kelamin"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="No HP"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Email"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Tempat Lahir"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Tanggal Lahir"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Agama"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -381,49 +382,49 @@
                             android:layout_height="wrap_content"
                             android:text="Surakarta"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Laki-laki"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="085942101462"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="oktavianbagasnugroho@gmail.com"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Surakarta"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="15 Oktober 2007"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Islam"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/black" />
+                            android:textColor="#F2FAFC" />
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>

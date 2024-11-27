@@ -34,7 +34,7 @@
             android:layout_marginEnd="44dp"
             android:layout_marginBottom="15dp"
             android:text="Formulir Pendaftaran"
-            android:textColor="@color/black"
+            android:textColor="#0F80BE"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -57,7 +57,7 @@
                 android:layout_marginHorizontal="30dp"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="#0F80BE"
                 android:layout_marginTop="20dp"
                 />
             <EditText
@@ -70,7 +70,7 @@
                 android:ems="10"
                 android:hint="Massukkan Nama Lengkap"
                 android:inputType="text"
-                android:textColorHint="#546E7A" />
+                android:textColorHint="#BF1287C8" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
                 android:layout_marginHorizontal="30dp"
                 android:textStyle="bold"
                 android:textSize="20dp"
-                android:textColor="@color/black"
+                android:textColor="#0F80BE"
                 android:layout_marginTop="20dp"
                 />
             <EditText
@@ -91,7 +91,7 @@
                 android:ems="10"
                 android:hint="Massukkan Kelas/Jurusan"
                 android:inputType="text"
-                android:textColorHint="#546E7A" />
+                android:textColorHint="#BF1287C8" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -99,7 +99,7 @@
                 android:layout_marginHorizontal="30dp"
                 android:textStyle="bold"
                 android:textSize="20dp"
-                android:textColor="@color/black"
+                android:textColor="#0F80BE"
                 android:layout_marginTop="10dp"
                 />
             <EditText
@@ -112,7 +112,7 @@
                 android:ems="10"
                 android:hint="Massukkan Alamat Tempat Tinggal"
                 android:inputType="text"
-                android:textColorHint="#546E7A" />
+                android:textColorHint="#BF1287C8" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
                 android:layout_marginHorizontal="30dp"
                 android:textStyle="bold"
                 android:textSize="20dp"
-                android:textColor="@color/black"
+                android:textColor="#0F80BE"
                 android:layout_marginTop="10dp"
                 />
             <EditText
@@ -133,7 +133,7 @@
                 android:ems="10"
                 android:hint="Massukkan No HP"
                 android:inputType="number"
-                android:textColorHint="#546E7A" />
+                android:textColorHint="#BF1287C8" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -143,7 +143,7 @@
                 android:text="Pilih Jenis Kelamin"
                 android:textStyle="bold"
                 android:textSize="20dp"
-                android:textColor="@color/black"/>
+                android:textColor="#0F80BE"/>
 
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/CGJenisKelamin"
@@ -153,18 +153,22 @@
                 android:layout_marginTop="10dp">
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/ChLaki"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Laki-laki"
-                    android:textSize="20dp"/>
+                android:id="@+id/ChLaki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laki-laki"
+                android:textSize="20dp"
+                app:chipStrokeColor="#1287C8"
+                android:textColor="#F31287C8"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/ChPerempuan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Perempuan"
-                    android:textSize="20dp"/>
+                    android:textSize="20dp"
+                    app:chipStrokeColor="#1287C8"
+                    android:textColor="#1287C8"/>
             </com.google.android.material.chip.ChipGroup>
 
             <TextView
@@ -176,7 +180,7 @@
                 android:text="Pilih Ekstarakulikuler"
                 android:textStyle="bold"
                 android:textSize="20dp"
-                android:textColor="@color/black"/>
+                android:textColor="#0F80BE"/>
 
             <Spinner
                 android:id="@+id/SpEkstra"
@@ -184,6 +188,7 @@
                 android:layout_height="48dp"
                 android:layout_marginHorizontal="30dp"
                 android:layout_marginTop="10dp"
+                android:spinnerMode="dialog"
                 android:entries="@array/ArrayEkstrakulikuler" />
 
             <Button
@@ -194,7 +199,9 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="30dp"
                 android:paddingHorizontal="50dp"
-                android:text="KIRIM" />
+                android:text="KIRIM"
+                android:textColor="#F2FAFC"
+                android:backgroundTint="#0F80BE"/>
         </LinearLayout>
     </ScrollView>
 

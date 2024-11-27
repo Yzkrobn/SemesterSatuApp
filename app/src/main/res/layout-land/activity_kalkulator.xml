@@ -42,7 +42,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/tvDisplay"
+        android:id="@+id/TVDisplay"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_margin="16dp"
@@ -68,7 +68,7 @@
         app:layout_constraintTop_toTopOf="@+id/gridButtons2">
 
         <TextView
-            android:id="@+id/TVTVClearAll"
+            android:id="@+id/TVClearAll"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -76,7 +76,7 @@
             android:background="@drawable/outline1"
             android:text="C\nA"
             android:textAlignment="center"
-            android:textSize="40sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/TVPlusMinus"
@@ -87,7 +87,7 @@
             android:background="@drawable/outline1"
             android:text="\n-/+"
             android:textAlignment="center"
-            android:textSize="40sp" />
+            android:textSize="30sp" />
     </GridLayout>
 
     <GridLayout
@@ -100,7 +100,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/constraintButtons1"
-        app:layout_constraintTop_toBottomOf="@+id/tvDisplay">
+        app:layout_constraintTop_toBottomOf="@+id/TVDisplay">
 
         <Button
             android:id="@+id/B7"
@@ -109,7 +109,16 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="7"
-            android:textSize="35sp" />
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/B8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="8"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/B9"
@@ -117,17 +126,8 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:text="8"
-            android:textSize="35sp" />
-
-        <Button
-            android:id="@+id/btn9"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
             android:text="9"
-            android:textSize="35sp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/BBAgi"
@@ -137,7 +137,7 @@
             android:layout_columnWeight="1"
             android:backgroundTint="#FF5722"
             android:text="÷"
-            android:textSize="35sp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/B4"
@@ -146,16 +146,16 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="4"
-            android:textSize="35sp" />
+            android:textSize="20sp" />
 
         <Button
-            android:id="@+id/b5"
+            android:id="@+id/B5"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="5"
-            android:textSize="35sp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/B6"
@@ -164,7 +164,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="6"
-            android:textSize="35sp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/BKali"
@@ -174,7 +174,7 @@
             android:layout_columnWeight="1"
             android:backgroundTint="#FF5722"
             android:text="X"
-            android:textSize="35sp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/B1"
@@ -183,7 +183,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="1"
-            android:textSize="35sp" />
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/B2"
@@ -192,7 +192,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="2"
-            android:textSize="35sp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/B3"
@@ -201,7 +201,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="3"
-            android:textSize="35sp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/BKurang"
@@ -211,7 +211,7 @@
             android:layout_columnWeight="1"
             android:backgroundTint="#FF5722"
             android:text="-"
-            android:textSize="35sp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/BHitung"
@@ -221,7 +221,7 @@
             android:layout_columnWeight="1"
             android:backgroundTint="#FF5722"
             android:text="="
-            android:textSize="35sp" />
+            android:textSize="20sp" />
 
 
         <Button
@@ -231,7 +231,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="0"
-            android:textSize="35sp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/BKoma"
@@ -240,7 +240,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text=","
-            android:textSize="35sp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/BTambah"
@@ -250,7 +250,7 @@
             android:layout_columnWeight="1"
             android:backgroundTint="#FF5722"
             android:text="+"
-            android:textSize="35sp" />
+            android:textSize="20sp" />
 
 
     </GridLayout>

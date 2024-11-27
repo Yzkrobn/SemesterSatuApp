@@ -119,6 +119,8 @@
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="30dp"
         android:text="Hitung"
+        android:backgroundTint="#1287C8"
+        android:textColor="#F2FAFC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
