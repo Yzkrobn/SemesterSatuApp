@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.icu.text.DecimalFormat
 import android.os.Bundle
+import android.util.TypedValue
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -98,56 +99,56 @@ class KalkulatorActivity : AppCompatActivity() {
         }
         B2.setOnClickListener{
             if (koma){
-                TVDisplay.setText("0.1")
+                TVDisplay.setText("0.2")
             }else{
                 TVDisplay.setText(("${TVDisplay.text}2"))
             }
         }
         B3.setOnClickListener{
             if (koma){
-                TVDisplay.setText("0.1")
+                TVDisplay.setText("0.3")
             }else{
                 TVDisplay.setText(("${TVDisplay.text}3"))
             }
         }
         B4.setOnClickListener{
             if (koma){
-                TVDisplay.setText("0.1")
+                TVDisplay.setText("0.4")
             }else{
                 TVDisplay.setText(("${TVDisplay.text}4"))
             }
         }
         B5.setOnClickListener{
             if (koma){
-                TVDisplay.setText("0.1")
+                TVDisplay.setText("0.5")
             }else{
                 TVDisplay.setText(("${TVDisplay.text}5"))
             }
         }
         B6.setOnClickListener{
             if (koma){
-                TVDisplay.setText("0.1")
+                TVDisplay.setText("0.6")
             }else{
                 TVDisplay.setText(("${TVDisplay.text}6"))
             }
         }
         B7.setOnClickListener{
             if (koma){
-                TVDisplay.setText("0.1")
+                TVDisplay.setText("0.7")
             }else{
                 TVDisplay.setText(("${TVDisplay.text}7"))
             }
         }
         B8.setOnClickListener{
             if (koma){
-                TVDisplay.setText("0.1")
+                TVDisplay.setText("0.8")
             }else{
                 TVDisplay.setText(("${TVDisplay.text}8"))
             }
         }
         B9.setOnClickListener{
             if (koma){
-                TVDisplay.setText("0.1")
+                TVDisplay.setText("0.9")
             }else{
                 TVDisplay.setText(("${TVDisplay.text}9"))
             }
@@ -186,7 +187,11 @@ class KalkulatorActivity : AppCompatActivity() {
         BHitung.setOnClickListener{
             if (aksi.isNotEmpty()){
                 val decimalFormat = DecimalFormat("#.###")
-                val NilaiDisplay = if (TVDisplay.text.isNotEmpty()){TVDisplay.text.toString().toDouble()} else {0.0}
+                val NilaiDisplay = if (TVDisplay.text.isNotEmpty()){
+                    try {
+                        TVDisplay.text.toString().toDouble()
+                    }catch (e: NumberFormatException){ 0.0 }
+                } else {0.0}
                 if (aksi.equals("tambah")){
                     val hasilHitung = NilaiAwal + NilaiDisplay
                     val terformat = decimalFormat.format(hasilHitung)
@@ -201,8 +206,10 @@ class KalkulatorActivity : AppCompatActivity() {
                     TVDisplay.setText(terformat)
                 }else if (aksi.equals("bagi")){
                     if (TVDisplay.text.toString().toDouble()==0.0){
+                        TVDisplay.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20f)
                         TVDisplay.setText("Tidak bisa membagi dengan 0/Nol")
                     }else{
+                        TVDisplay.setTextSize(TypedValue.COMPLEX_UNIT_SP, 80f)
                         val hasilHitung = NilaiAwal / NilaiDisplay
                         val terformat  = decimalFormat.format(hasilHitung)
                         TVDisplay.setText(terformat)

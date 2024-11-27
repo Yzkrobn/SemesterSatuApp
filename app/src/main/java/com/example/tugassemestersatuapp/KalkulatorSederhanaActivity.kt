@@ -74,7 +74,7 @@ class KalkulatorSederhanaActivity : AppCompatActivity() {
             }
             val format = DecimalFormat("#,###,###.##")
             val output = format.format(hasil)
-            Toast.makeText(this,"Hasil ="+output,Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Hasil = $output",Toast.LENGTH_SHORT).show()
         }
     }
 }

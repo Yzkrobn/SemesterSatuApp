@@ -123,6 +123,7 @@
                 android:textColor="#0F80BE"
                 android:layout_marginTop="10dp"
                 />
+
             <EditText
                 android:id="@+id/etNoHp"
                 android:layout_width="match_parent"
@@ -145,31 +146,47 @@
                 android:textSize="20dp"
                 android:textColor="#0F80BE"/>
 
-            <com.google.android.material.chip.ChipGroup
-                android:id="@+id/CGJenisKelamin"
+            <RadioGroup
+                android:id="@+id/RGJenisKelamin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
+                android:orientation="horizontal"
                 android:layout_marginTop="10dp">
 
-                <com.google.android.material.chip.Chip
-                android:id="@+id/ChLaki"
+                <RadioButton
+                android:id="@+id/RBLaki"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Laki-laki"
                 android:textSize="20dp"
                 app:chipStrokeColor="#1287C8"
-                android:textColor="#F31287C8"/>
+                android:textColor="#F31287C8"
+                    android:checkable="true"
+                />
 
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/ChPerempuan"
+                <RadioButton
+                    android:id="@+id/RBPerempuan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Perempuan"
                     android:textSize="20dp"
                     app:chipStrokeColor="#1287C8"
-                    android:textColor="#1287C8"/>
-            </com.google.android.material.chip.ChipGroup>
+                    android:textColor="#1287C8"
+                    android:checkable="true"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvEror"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="10dp"
+                android:text="EM"
+                android:textColor="#FF1C1C"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
 
             <TextView
                 android:layout_width="match_parent"
