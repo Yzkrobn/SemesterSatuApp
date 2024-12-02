@@ -15,12 +15,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.get
-import com.google.android.material.chip.Chip
-import com.google.android.material.chip.ChipGroup
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -106,7 +102,7 @@ class FolmulirPendaftaranActivity : AppCompatActivity() {
 
 
         val builder = AlertDialog.Builder(this)
-//            builder.setIcon(R.drawable.)
+        builder.setIcon(R.drawable.baseline_check_circle_outline_24)
         builder.setTitle("Data Yang Dikirim")
         builder.setMessage("Isi data adalah :\nNama: $nama\nKelas/Jurusan: $kelas\nAlamat: $alamat\nNo Hp: $nohp\nJenis Kelamin: $jenisKelamin\nEkstrakulikuler: $ekstra")
         builder.setPositiveButton("Kembali Ke dasbor") { _, _ ->

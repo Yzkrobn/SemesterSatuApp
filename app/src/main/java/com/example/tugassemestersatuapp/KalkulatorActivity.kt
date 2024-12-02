@@ -178,7 +178,6 @@ class KalkulatorActivity : AppCompatActivity() {
         BKurang.setOnClickListener{
             isiData()
             aksi = "kurang"
-            TVDisplay.setText("-")
         }
         BTambah.setOnClickListener{
             isiData()
